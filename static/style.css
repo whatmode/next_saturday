@@ -1,0 +1,37 @@
+/* General reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #283618;
+    color: #ffffff;
+    text-align: center;
+}
+
+h1 {
+    font-size: 3em;
+    font-weight: bold;
+    color: #dda15e;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.date-info {
+    font-size: 1.8em;
+    color: #fefae0;
+    font-weight: 500;
+    margin-top: 10px;
+}
+
+/* Slight Shadow for Depth */
+h1, .date-info {
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
