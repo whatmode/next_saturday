@@ -5,11 +5,22 @@ next_saturday = Flask(__name__)
 
 def time_until_saturday():
     today = datetime.now()
-    days_until_saturday = 5 - today.weekday()
-    if days_until_saturday <= 0:
-        days_until_saturday += 7
-    next_saturday = today + timedelta(days=days_until_saturday)
-    return next_saturday.strftime("%A, %d %B %Y")
+    weekday = today.weekday()
+
+    if weekday == 0:  # Monday
+        return 5
+    elif weekday == 1:  # Tuesday
+        return 4
+    elif weekday == 2:  # Wednesday
+        return 3
+    elif weekday == 3:  # Thursday
+        return 2
+    elif weekday == 4:  # Friday
+        return 1
+    elif weekday == 5:  # Saturday
+        return 7
+    elif weekday == 6:  # Sunday
+        return 6
 
 @next_saturday.route('/')
 def index():
